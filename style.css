@@ -27,3 +27,42 @@ header .nav-link {
 .nav-link:hover {
   background-color: rgb(46, 46, 46);
 }
+
+main {
+  display: grid;
+  grid-template-areas: "introduction introduction cards" "introduction introduction cards";
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.introduction-information {
+  background: url(images/IMG_0972.PNG) no-repeat;
+  background-size: cover;
+  grid-area: introduction;
+  padding: 3rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+
+  color: white;
+  aspect-ratio: 1 / 1;
+}
+
+/* .card-container {
+  grid-area: cards;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  position: absolute;
+} */
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
