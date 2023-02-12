@@ -9,6 +9,7 @@
 body {
   display: grid;
   grid-template-areas: "header main main main" "header main main main" "header main main main" "footer footer footer footer";
+  grid-template-columns: 150px repeat(3, auto);
 }
 
 nav ul {
@@ -68,6 +69,7 @@ h2 {
 
 main {
   grid-area: main;
+  text-align: center;
 }
 
 footer {
