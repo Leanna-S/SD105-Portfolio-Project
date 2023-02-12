@@ -7,17 +7,28 @@
 }
 
 body {
-  height: 100vh;
+  display: grid;
+  grid-template-areas: "header main main main" "header main main main" "header main main main" "footer footer footer footer";
 }
+
 nav ul {
   display: flex;
   justify-content: space-evenly;
   list-style-type: none;
 }
 
+header nav ul {
+  flex-direction: column;
+}
+header {
+  grid-area: header;
+  background-color: rgb(15, 15, 15);
+}
+
 header .nav-link {
   padding: 1rem;
 }
+
 .nav-link {
   background-color: rgb(15, 15, 15);
   width: 100%;
@@ -46,10 +57,7 @@ h2 {
 }
 
 main {
-  display: grid;
-  grid-template-rows: repeat(2, 1fr);
-  grid-template-areas: "introduction" "cards";
-  gap: 2rem;
+  grid-area: main;
 }
 
 .introduction-information {
@@ -61,12 +69,14 @@ main {
   align-items: center;
   justify-content: center;
   text-align: center;
+  flex-direction: column;
 
   color: white;
   aspect-ratio: 1 / 1;
 }
 
 footer {
+  grid-area: footer;
   display: flex;
   justify-content: space-between;
   align-items: center;
