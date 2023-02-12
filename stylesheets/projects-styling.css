@@ -1,0 +1,56 @@
+.card-section {
+  display: flex;
+  flex-direction: column;
+  gap: 40%;
+  text-align: center;
+}
+
+.card-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.card {
+  position: absolute;
+  width: 40%;
+  transition: transform 0.8s ease-out;
+}
+
+.card img {
+  width: 100%;
+}
+
+.card:nth-of-type(1) {
+  transform: translateX(6%) rotate(10deg);
+}
+
+.card:nth-of-type(2) {
+  transform: translateX(2%) rotate(-5deg);
+}
+
+.card:nth-of-type(3) {
+  transform: translateX(-2%) rotate(3deg);
+}
+
+.card:nth-of-type(4) {
+  transform: translateX(6%) rotate(10deg);
+}
+
+.card-container:hover > .card:nth-of-type(1) {
+  transform: translate(45%, 10%) rotate(15deg);
+}
+
+.card-container:hover > .card:nth-of-type(2) {
+  transform: translate(15%, 0) rotate(6deg);
+}
+
+.card-container:hover > .card:nth-of-type(3) {
+  transform: translate(-15%, 0) rotate(-6deg);
+}
+
+.card-container:hover > .card:nth-of-type(4) {
+  transform: translate(-45%, 10%) rotate(-15deg);
+}

@@ -1,0 +1,17 @@
+.introduction-information {
+  background-color: rgb(36, 36, 36);
+  background: url(../images/IMG_0972.PNG) no-repeat;
+
+  background-size: cover;
+
+  padding: 3rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+
+  color: white;
+  aspect-ratio: 1 / 1;
+}
