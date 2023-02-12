@@ -38,42 +38,32 @@ header .nav-link {
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 3rem;
   margin-bottom: 1rem;
+}
+h2 {
+  font-size: 1.5rem;
 }
 
 main {
   display: grid;
-  grid-template-areas: "introduction introduction cards" "introduction introduction cards";
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas: "introduction" "cards";
+  gap: 2rem;
 }
 
 .introduction-information {
   background: url(images/IMG_0972.PNG) no-repeat;
   background-size: cover;
-  grid-area: introduction;
   padding: 3rem;
 
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  flex-direction: column;
 
   color: white;
   aspect-ratio: 1 / 1;
-}
-
-.card-container {
-  grid-area: cards;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.card {
-  position: absolute;
 }
 
 footer {
@@ -91,4 +81,62 @@ footer > * {
 .contact-information {
   color: white;
   text-align: center;
+}
+
+.card-section {
+  grid-area: cards;
+  display: flex;
+  flex-direction: column;
+  gap: 40%;
+  text-align: center;
+}
+
+.card-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.card {
+  position: absolute;
+  width: 40%;
+  transition: transform 0.8s ease-out;
+}
+
+.card img {
+  width: 100%;
+}
+
+.card:nth-of-type(1) {
+  transform: translateX(6%) rotate(10deg);
+}
+
+.card:nth-of-type(2) {
+  transform: translateX(2%) rotate(-5deg);
+}
+
+.card:nth-of-type(3) {
+  transform: translateX(-2%) rotate(3deg);
+}
+
+.card:nth-of-type(4) {
+  transform: translateX(6%) rotate(10deg);
+}
+
+.card-container:hover > .card:nth-of-type(1) {
+  transform: translate(45%, 10%) rotate(15deg);
+}
+
+.card-container:hover > .card:nth-of-type(2) {
+  transform: translate(15%, 0) rotate(6deg);
+}
+
+.card-container:hover > .card:nth-of-type(3) {
+  transform: translate(-15%, 0) rotate(-6deg);
+}
+
+.card-container:hover > .card:nth-of-type(4) {
+  transform: translate(-45%, 10%) rotate(-15deg);
 }
