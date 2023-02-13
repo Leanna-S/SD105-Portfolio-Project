@@ -3,30 +3,30 @@ const previousCardButton = document.getElementById("get-previous-card");
 const cardContainer = document.querySelector(".card-container");
 const cards = document.querySelectorAll(".card img");
 const art = [
-  "IMG_1111.PNG",
-  "IMG_1112.PNG",
-  "IMG_1113.PNG",
-  "IMG_1114.PNG",
-  "IMG_0775.PNG",
-  "IMG_0854.PNG",
-  "IMG_0880.PNG",
-  "IMG_0881.PNG",
-  "IMG_0890.PNG",
-  "IMG_0891.PNG",
-  "IMG_0923.PNG",
-  "IMG_0924.PNG",
-  "IMG_0936.PNG",
-  "IMG_0972.PNG",
-  "IMG_0977.PNG",
-  "IMG_0987.PNG",
-  "IMG_0993.PNG",
-  "IMG_1032.PNG",
-  "IMG_1033.PNG",
-  "IMG_1034.PNG",
-  "IMG_1035.PNG",
-  "IMG_1036.PNG",
-  "IMG_1037.PNG",
-  "IMG_1039.PNG",
+  "IMG_1111",
+  "IMG_1112",
+  "IMG_1113",
+  "IMG_1114",
+  "IMG_0775",
+  "IMG_0854",
+  "IMG_0880",
+  "IMG_0881",
+  "IMG_0890",
+  "IMG_0891",
+  "IMG_0923",
+  "IMG_0924",
+  "IMG_0936",
+  "IMG_0972",
+  "IMG_0977",
+  "IMG_0987",
+  "IMG_0993",
+  "IMG_1032",
+  "IMG_1033",
+  "IMG_1034",
+  "IMG_1035",
+  "IMG_1036",
+  "IMG_1037",
+  "IMG_1039",
 ];
 
 let currentPhoto = 3;
@@ -38,7 +38,7 @@ nextCardButton.addEventListener("click", () => {
     } else {
       currentPhoto++;
     }
-    card.src = `/images/${art[currentPhoto]}`;
+    card.src = `/images/${art[currentPhoto]}.jpg`;
     card.classList.add("fade-in-animation");
     setTimeout(() => {
       card.classList.remove("fade-in-animation");
@@ -54,7 +54,7 @@ previousCardButton.addEventListener("click", () => {
       currentPhoto--;
     }
 
-    card.src = `/images/${art[currentPhoto - 3]}`;
+    card.src = `/images/${art[currentPhoto - 3]}.jpg`;
     card.classList.add("fade-in-animation");
     setTimeout(() => {
       card.classList.remove("fade-in-animation");
