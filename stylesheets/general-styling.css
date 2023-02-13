@@ -90,8 +90,7 @@ footer > * {
 }
 
 .contact-information {
-  color: white;
-  text-align: center;
+  color: rgb(181, 181, 181);
 }
 
 @media (max-width: 800px) {
@@ -119,7 +118,7 @@ footer > * {
   }
 
   footer {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
   footer nav {
     margin-bottom: 2rem;
