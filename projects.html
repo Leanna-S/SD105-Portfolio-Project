@@ -8,6 +8,11 @@
     <script src="https://kit.fontawesome.com/2432c97188.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="stylesheets/general-styling.css" />
     <link rel="stylesheet" href="stylesheets/projects-styling.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap"
+      rel="stylesheet" />
   </head>
   <body>
     <header>
@@ -15,12 +20,12 @@
         <ul>
           <li class="nav-link"><a href="index.html">Home</a></li>
           <li class="nav-link"><a href="">About</a></li>
-          <li class="nav-link"><a href="projects.html">Projects</a></li>
+          <li class="nav-link selected"><a href="projects.html">Projects</a></li>
         </ul>
       </nav>
     </header>
     <main>
-      <h1>Projects</h1>
+      <h1 class="blue">Projects</h1>
       <section class="card-section">
         <h2>Check Out My Art</h2>
         <div class="card-container">
@@ -34,24 +39,37 @@
           <button id="get-next-card"><i class="fa-solid fa-arrow-right"></i></button>
         </div>
       </section>
+      <section class="project-links">
+        <div class="project-link">
+          <a href="https://github.com/Leanna-S">
+            <i class="fa-brands fa-github blue"></i>
+            <div>
+              <h3>Github</h3>
+              <p>Check Out My Coding Projects On Github</p>
+            </div>
+          </a>
+        </div>
+      </section>
     </main>
 
     <footer>
       <div class="contact-information">
         <h4>Contact Information</h4>
-        <p>leannaszypowski@gmail.com</p>
-        <p>(431)-337-3339</p>
-        <p>https://github.com/Leanna-S</p>
+        <div>
+          <p>leannaszypowski@gmail.com</p>
+          <p>(431)-337-3339</p>
+          <p>https://github.com/Leanna-S</p>
+        </div>
       </div>
       <nav>
         <ul>
           <li class="nav-link"><a href="index.html">Home</a></li>
           <li class="nav-link"><a href="">About</a></li>
-          <li class="nav-link"><a href="projects.html">Projects</a></li>
+          <li class="nav-link selected"><a href="projects.html">Projects</a></li>
         </ul>
       </nav>
     </footer>
 
-    <script src="scripts/app.js"></script>
+    <script src="scripts/cardEffect.js"></script>
   </body>
 </html>

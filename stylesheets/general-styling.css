@@ -3,7 +3,7 @@
   margin: 0;
   box-sizing: border-box;
   font-size: 20px;
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: "Roboto Condensed", sans-serif;
 }
 
 body {
@@ -36,6 +36,16 @@ nav ul {
   font-size: 1.2rem;
 }
 
+.selected a {
+  color: rgb(70, 172, 255);
+  font-weight: bold;
+}
+
+.blue {
+  color: rgb(70, 172, 255);
+  font-size: 3rem;
+}
+
 .nav-link:hover {
   background-color: rgb(46, 46, 46);
 }
@@ -50,11 +60,11 @@ header {
 }
 
 header .nav-link {
-  border-bottom: 1px solid rgb(181, 181, 181);
+  border-bottom: 2px solid rgb(25, 25, 25);
 }
 
 footer .nav-link {
-  border-left: 1px solid rgb(181, 181, 181);
+  border-left: 2px solid rgb(25, 25, 25);
 }
 
 footer .nav-link:first-child {
@@ -83,7 +93,7 @@ footer {
   align-items: center;
   background-color: rgb(15, 15, 15);
   padding: 1rem;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 footer > * {
@@ -91,9 +101,29 @@ footer > * {
 }
 
 .contact-information {
-  color: rgb(181, 181, 181);
+  color: rgba(255, 255, 255, 0.5);
+  text-align: center;
 }
 
+.contact-information div {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.contact-information div p {
+  text-align: center;
+  border-left: 2px solid rgb(25, 25, 25);
+  padding: 0 0.2rem;
+}
+
+.contact-information div p:first-child {
+  border: none;
+}
+
+.contact-information * {
+  font-size: 0.6rem;
+}
 @media (max-width: 800px) {
   * {
     font-size: 16px;
@@ -110,7 +140,7 @@ footer > * {
 
   header .nav-link {
     border: none;
-    border-left: 1px solid rgb(181, 181, 181);
+    border-left: 2px solid rgb(25, 25, 25);
     padding: 1rem 0;
   }
 

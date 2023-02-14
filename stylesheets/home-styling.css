@@ -1,19 +1,23 @@
 .introduction-information {
   background-color: rgb(36, 36, 36);
-  background: url(../images/IMG_0972.jpg) no-repeat;
+  background: url(../images/image0.jpg) no-repeat;
 
   background-size: cover;
 
   padding: 3rem;
-
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   flex-direction: column;
-
   color: white;
   aspect-ratio: 1 / 1;
+}
+
+.introduction-information div {
+  background-color: rgba(15, 15, 15, 0.75);
+  border-radius: 2rem;
+  padding: 1rem;
 }
 
 .skills {
@@ -44,10 +48,24 @@
 }
 .skills p {
   font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.75);
 }
 
 @media (max-width: 800px) {
   .skills {
     flex-direction: column;
+  }
+}
+
+@media (min-width: 1200px) {
+  main {
+    display: flex;
+    flex-direction: row;
+  }
+  .skills {
+    flex-direction: column;
+  }
+  .skill {
+    aspect-ratio: 3/2;
   }
 }
