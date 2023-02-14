@@ -31,6 +31,15 @@ const art = [
 
 let currentPhoto = 3;
 
+function handleCardClick(currentCard) {
+  currentCard.style.zIndex = "1";
+  currentCard.style.transform = "translate(0) scale(1.25)";
+  setTimeout(() => {
+    currentCard.style.zIndex = "";
+    currentCard.style.transform = "";
+  }, "1500");
+}
+
 nextCardButton.addEventListener("click", () => {
   cards.forEach((card) => {
     if (currentPhoto >= art.length - 1) {
@@ -38,8 +47,9 @@ nextCardButton.addEventListener("click", () => {
     } else {
       currentPhoto++;
     }
-    card.src = `/images/${art[currentPhoto]}.jpg`;
+
     card.classList.add("fade-in-animation");
+    card.src = `/images/${art[currentPhoto]}.jpg`;
     setTimeout(() => {
       card.classList.remove("fade-in-animation");
     }, "1000");
@@ -54,10 +64,16 @@ previousCardButton.addEventListener("click", () => {
       currentPhoto--;
     }
 
-    card.src = `/images/${art[currentPhoto - 3]}.jpg`;
     card.classList.add("fade-in-animation");
+    card.src = `/images/${art[currentPhoto - 3]}.jpg`;
     setTimeout(() => {
       card.classList.remove("fade-in-animation");
     }, "1000");
   });
+});
+
+cardContainer.addEventListener("click", (event) => {
+  if (event.target.classList.contains("card") || event.target.tagName === "IMG") {
+    handleCardClick(event.target.closest(".card"));
+  }
 });
