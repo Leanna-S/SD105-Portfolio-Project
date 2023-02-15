@@ -49,7 +49,7 @@ nextCardButton.addEventListener("click", () => {
     }
 
     card.classList.add("fade-in-animation");
-    card.src = `/images/${art[currentPhoto]}.jpg`;
+    card.src = `./images/${art[currentPhoto]}.jpg`;
     setTimeout(() => {
       card.classList.remove("fade-in-animation");
     }, "1000");
@@ -65,7 +65,7 @@ previousCardButton.addEventListener("click", () => {
     }
 
     card.classList.add("fade-in-animation");
-    card.src = `/images/${art[currentPhoto - 3]}.jpg`;
+    card.src = `./images/${art[currentPhoto - 3]}.jpg`;
     setTimeout(() => {
       card.classList.remove("fade-in-animation");
     }, "1000");
