@@ -14,21 +14,16 @@
   aspect-ratio: 1 / 1;
 }
 
-.introduction-information > div {
+.introduction-information div {
   background-color: rgba(15, 15, 15, 0.75);
-  border-radius: 1rem;
-  position: relative;
-}
-
-.introduction-information > div h1,
-.introduction-information > div p {
-  padding: 0.8rem;
+  border-radius: 2rem;
+  padding: 1rem;
 }
 
 .skills {
-  display: grid;
+  display: flex;
   text-align: left;
-  grid-template-columns: repeat(3, 1fr);
+  justify-content: space-evenly;
   padding: 1rem;
   gap: 1rem;
 }
@@ -58,7 +53,7 @@
 
 @media (max-width: 800px) {
   .skills {
-    grid-template-columns: 1fr;
+    flex-direction: column;
   }
 }
 
@@ -68,10 +63,9 @@
     flex-direction: row;
   }
   .skills {
-    grid-template-columns: 1fr;
-    margin: 0 auto;
+    flex-direction: column;
   }
   .skill {
-    aspect-ratio: 1/1;
+    aspect-ratio: 3/2;
   }
 }
