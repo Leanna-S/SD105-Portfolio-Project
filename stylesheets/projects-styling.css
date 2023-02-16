@@ -104,6 +104,11 @@ main {
   font-size: 3rem;
   color: white;
   padding: 1rem;
+  transition: transform 0.5s;
+}
+
+.card-buttons button:hover i {
+  transform: scale(1.2);
 }
 
 .project-links {
