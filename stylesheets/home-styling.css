@@ -1,6 +1,7 @@
 .introduction-information {
   background-color: rgb(36, 36, 36);
   background: url(../images/image0.jpg) no-repeat;
+  border-radius: 2rem;
 
   background-size: cover;
 

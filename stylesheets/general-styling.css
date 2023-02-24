@@ -5,6 +5,9 @@
   font-size: 20px;
   font-family: "Roboto Condensed", sans-serif;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   display: grid;
@@ -43,7 +46,6 @@ nav ul {
 
 .blue {
   color: rgb(70, 172, 255);
-  font-size: 3rem;
 }
 
 .nav-link:hover {
@@ -71,10 +73,17 @@ footer .nav-link:first-child {
   border: none;
 }
 
-h1 {
+main {
+  padding: 2rem;
+  background: radial-gradient(rgb(35, 35, 35), rgb(25, 25, 25));
+}
+
+h1,
+h1 .blue {
   font-size: 3rem;
   margin-bottom: 1rem;
 }
+
 h2 {
   font-size: 1.5rem;
 }
@@ -92,7 +101,6 @@ footer {
   justify-content: space-between;
   align-items: center;
   background-color: rgb(15, 15, 15);
-  padding: 1rem;
   gap: 1rem;
 }
 
