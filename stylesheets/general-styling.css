@@ -1,3 +1,7 @@
+:root {
+  --theme-color: rgb(70, 172, 255);
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -5,6 +9,7 @@
   font-size: 20px;
   font-family: "Roboto Condensed", sans-serif;
 }
+
 html {
   scroll-behavior: smooth;
 }
@@ -41,12 +46,12 @@ nav ul {
 }
 
 .selected a {
-  color: rgb(70, 172, 255);
+  color: var(--theme-color);
   font-weight: bold;
 }
 
-.blue {
-  color: rgb(70, 172, 255);
+.colored {
+  color: var(--theme-color);
 }
 
 .nav-link:hover,
@@ -82,7 +87,7 @@ main {
 
 h1 {
   font-size: 3rem;
-  border-bottom: 2px solid rgb(70, 172, 255);
+  border-bottom: 2px solid var(--theme-color);
   width: 50%;
   margin: 2rem auto;
 }
@@ -106,6 +111,7 @@ main {
 footer {
   grid-area: footer;
   display: flex;
+  flex-direction: column-reverse;
   justify-content: space-between;
   align-items: center;
   background-color: rgb(15, 15, 15);
@@ -149,7 +155,7 @@ footer > * {
   animation: bounceIn 1s forwards;
 }
 
-.home-container h1 .blue {
+.home-container h1 .colored {
   font-size: inherit;
 }
 
@@ -254,7 +260,7 @@ h2 {
   height: 100%;
   top: 0;
   left: 0;
-  background-color: rgb(70, 172, 255);
+  background-color: var(--theme-color);
   border-radius: 2rem;
   animation: expandWidth 2s ease-in-out forwards;
 }
@@ -490,6 +496,41 @@ h4 {
   background-color: rgba(46, 46, 46, 0.75);
 }
 
+.color-changer {
+  color: white;
+  text-align: center;
+}
+
+.color-changer ul {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 0.5rem;
+}
+
+.color {
+  display: block;
+  padding: 1rem;
+  border: none;
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+.color:nth-child(1) {
+  background-color: rgb(70, 172, 255);
+}
+.color:nth-child(2) {
+  background-color: rgb(255, 71, 71);
+}
+.color:nth-child(3) {
+  background-color: hsl(107, 68%, 43%);
+}
+.color:nth-child(4) {
+  background-color: rgb(169, 71, 255);
+}
+.color:nth-child(5) {
+  background-color: hsl(48, 85%, 53%);
+}
+
 @keyframes bounceIn {
   0% {
     opacity: 0;
@@ -501,6 +542,10 @@ h4 {
 }
 
 @media (min-width: 1200px) {
+  footer {
+    flex-direction: row;
+  }
+
   .home-container {
     display: flex;
     flex-direction: row;
@@ -517,10 +562,6 @@ h4 {
   .skill-bar-container {
     grid-template-columns: 1fr;
     width: 100%;
-  }
-
-  .skills {
-    grid-template-columns: repeat(1, 1fr);
   }
 
   .project-links {
@@ -552,14 +593,6 @@ h4 {
     border: none;
   }
 
-  footer {
-    flex-direction: column-reverse;
-  }
-
-  footer nav {
-    margin-bottom: 2rem;
-  }
-
   .abilities {
     grid-template-columns: repeat(1, 1fr);
   }
@@ -578,6 +611,10 @@ h4 {
 
   .card {
     width: 35vw;
+  }
+
+  .skills {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 
