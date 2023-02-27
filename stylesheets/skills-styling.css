@@ -39,6 +39,3 @@ h4 {
     grid-template-columns: repeat(1, 1fr);
   }
 }
-
-@media (min-width: 1200px) {
-}
