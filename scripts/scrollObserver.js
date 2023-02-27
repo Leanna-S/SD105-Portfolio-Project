@@ -4,9 +4,7 @@ const options = {
 };
 
 const io = new IntersectionObserver((entries) => {
-  console.log(entries);
   entries.forEach((entry) => {
-    console.log(entry.intersectionRatio);
     if (entry.intersectionRatio >= 0.5) {
       // Add 'active' class if observation target is inside viewport
       entry.target.classList.remove("inactive");

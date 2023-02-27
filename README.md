@@ -5,11 +5,4 @@ This project will be used to show off my skills for practice, and to show potent
 
 ## Features to be added
 
-- Responsive (Mobile, tablet, desktop)
-- Accessibility practices
-- Nav bar
-- Cards that unfurl on hover
-- Starting animation
-- About page
-- Linked projects page (may include web games)
 - Change the color of the theme

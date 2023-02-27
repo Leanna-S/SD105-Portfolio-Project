@@ -77,3 +77,9 @@ cardContainer.addEventListener("click", (event) => {
     handleCardClick(event.target.closest(".card"));
   }
 });
+
+cardContainer.addEventListener("focusin", (event) => {
+  if (event.target.classList.contains("card") || event.target.tagName === "IMG") {
+    handleCardClick(event.target.closest(".card"));
+  }
+});
