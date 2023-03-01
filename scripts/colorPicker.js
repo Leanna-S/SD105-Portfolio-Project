@@ -1,11 +1,13 @@
 const root = document.querySelector(":root");
-root.style.setProperty("--theme-color", sessionStorage.getItem("theme-color"));
+console.log(root.style);
+root.style.setProperty("--theme-color", sessionStorage.getItem("themeColor"));
 
 function handleColorChange(element) {
-  let colorToChangeTo = getComputedStyle(element).background;
-
+  let colorToChangeTo = getComputedStyle(element).backgroundColor;
+  console.log(colorToChangeTo);
+  sessionStorage.setItem("themeColor", colorToChangeTo);
   root.style.setProperty("--theme-color", colorToChangeTo);
-  sessionStorage.setItem("theme-color", colorToChangeTo);
+  console.log(root.style);
 }
 
 document.querySelector(".color-changer").addEventListener("click", (event) => {
