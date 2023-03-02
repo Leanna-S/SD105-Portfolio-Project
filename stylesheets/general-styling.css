@@ -443,17 +443,17 @@ h4 {
 }
 
 .card-buttons button:hover,
-.card-buttons button:focus {
+.card-buttons button:focus-visible {
   background-color: rgba(46, 46, 46, 0.75);
 }
 
 #get-previous-card:hover i,
-#get-previous-card:focus i {
+#get-previous-card:focus-visible i {
   transform: translateX(-10%);
 }
 
 #get-next-card:hover i,
-#get-next-card:focus i {
+#get-next-card:focus-visible i {
   transform: translateX(10%);
 }
 

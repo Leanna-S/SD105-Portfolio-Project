@@ -58,28 +58,27 @@ function handleCardClick(currentCard) {
 }
 
 function nextCard() {
-  cards.forEach((card) => {
-    card.src = `./images/${art[currentPhoto]}.jpg`;
+  if (currentPhoto + 4 >= art.length) {
+    currentPhoto = 0;
+  } else {
+    currentPhoto = currentPhoto + 4;
+  }
+  cards.forEach((card, index) => {
+    card.src = `./images/${art[currentPhoto + index]}.jpg`;
     changeCard(card);
-
-    if (currentPhoto >= art.length - 1) {
-      currentPhoto = 0;
-    } else {
-      currentPhoto++;
-    }
   });
 }
 
 function previousCard() {
-  cards.forEach((card) => {
-    card.src = `./images/${art[currentPhoto - 5]}.jpg`;
-    changeCard(card);
+  if (currentPhoto <= 4) {
+    currentPhoto = art.length;
+  } else {
+    currentPhoto = currentPhoto - 4;
+  }
 
-    if (currentPhoto <= 5) {
-      currentPhoto = art.length - 1;
-    } else {
-      currentPhoto--;
-    }
+  cards.forEach((card, index) => {
+    card.src = `./images/${art[currentPhoto - index - 1]}.jpg`;
+    changeCard(card);
   });
 }
 
