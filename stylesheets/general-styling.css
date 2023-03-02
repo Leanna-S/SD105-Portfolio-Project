@@ -83,6 +83,7 @@ footer .nav-link:first-child {
 main {
   padding: 1rem;
   background: radial-gradient(rgb(35, 35, 35), rgb(25, 25, 25));
+  position: relative;
 }
 
 h1 {
@@ -621,8 +622,13 @@ h4 {
   * {
     font-size: 14px;
   }
+
   header nav ul,
   footer nav ul {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .nav-link:nth-child(3) {
+    border-left: none;
   }
 }
