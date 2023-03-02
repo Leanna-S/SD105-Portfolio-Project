@@ -1,0 +1,25 @@
+{
+  "name": "sd105-portfolio-project",
+  "version": "1.0.0",
+  "description": "This project will contain what I learned in HTML, CSS, and JavaScript.\r This project will be used to show off my skills for practice, and to show potential employers.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vite dev",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Leanna-S/SD105-Portfolio-Project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Leanna-S/SD105-Portfolio-Project/issues"
+  },
+  "homepage": "https://github.com/Leanna-S/SD105-Portfolio-Project#readme",
+  "dependencies": {
+    "vite": "^4.1.4"
+  }
+}
