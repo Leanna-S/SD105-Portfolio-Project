@@ -29,7 +29,24 @@ const art = [
   "IMG_1039",
 ];
 
-let currentPhoto = 3;
+function shuffle(array) {
+  let currentIndex = array.length,
+    randomIndex;
+
+  // While there remain elements to shuffle.
+  while (currentIndex != 0) {
+    // Pick a remaining element.
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex--;
+
+    // And swap it with the current element.
+    [array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
+  }
+
+  return array;
+}
+
+let currentPhoto = 0;
 
 function handleCardClick(currentCard) {
   currentCard.style.zIndex = "1";
@@ -40,37 +57,41 @@ function handleCardClick(currentCard) {
   }, "1500");
 }
 
-nextCardButton.addEventListener("click", () => {
+function nextCard() {
   cards.forEach((card) => {
+    card.src = `./images/${art[currentPhoto]}.jpg`;
+    changeCard(card);
+
     if (currentPhoto >= art.length - 1) {
       currentPhoto = 0;
     } else {
       currentPhoto++;
     }
-
-    card.classList.add("fade-in-animation");
-    card.src = `./images/${art[currentPhoto]}.jpg`;
-    setTimeout(() => {
-      card.classList.remove("fade-in-animation");
-    }, "1000");
   });
-});
+}
 
-previousCardButton.addEventListener("click", () => {
+function previousCard() {
   cards.forEach((card) => {
-    if (currentPhoto <= 3) {
-      currentPhoto = art.length + 2;
+    card.src = `./images/${art[currentPhoto - 5]}.jpg`;
+    changeCard(card);
+
+    if (currentPhoto <= 5) {
+      currentPhoto = art.length - 1;
     } else {
       currentPhoto--;
     }
-
-    card.classList.add("fade-in-animation");
-    card.src = `./images/${art[currentPhoto - 3]}.jpg`;
-    setTimeout(() => {
-      card.classList.remove("fade-in-animation");
-    }, "1000");
   });
-});
+}
+
+function changeCard(card) {
+  card.classList.add("fade-in-animation");
+  setTimeout(() => {
+    card.classList.remove("fade-in-animation");
+  }, "1000");
+}
+
+previousCardButton.addEventListener("click", previousCard);
+nextCardButton.addEventListener("click", nextCard);
 
 cardContainer.addEventListener("click", (event) => {
   if (event.target.classList.contains("card") || event.target.tagName === "IMG") {
@@ -83,3 +104,6 @@ cardContainer.addEventListener("focusin", (event) => {
     handleCardClick(event.target.closest(".card"));
   }
 });
+
+shuffle(art);
+nextCard();
